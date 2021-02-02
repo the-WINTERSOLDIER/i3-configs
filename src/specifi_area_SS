@@ -1,0 +1,3 @@
+#!/bin/bash
+notify-send -t 4500 "Capture a specific area" "single-click and drag"
+maim --select ~/Pictures/$(date +%F-%T).png > /dev/null
