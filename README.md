@@ -5,7 +5,11 @@ config.txt ,mystatusbar.sh , screenshot_utility.sh, specifi_area_SS.sh : ~/.conf
 
 ![Alt text](https://raw.githubusercontent.com/the-WINTERSOLDIER/i3-configs/main/screenshot/2021-02-02-17%3A30%3A59.png "Status bar built from scratch in bash")
 
-
+**DEPENDECY**
+[*] *i3statusbar*
+    ↳maim(for screenshot utility)
+[*] *VIM*
+    ↳vundle(plugin manger)
 
 
 
