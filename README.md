@@ -9,8 +9,10 @@ config.txt ,mystatusbar.sh , screenshot_utility.sh, specifi_area_SS.sh : ~/.conf
 **DEPENDECY**
 
 -*i3statusbar*
+
     ↳maim(for screenshot utility)
 -*VIM*
+
     ↳vundle(plugin manger)
 
 
