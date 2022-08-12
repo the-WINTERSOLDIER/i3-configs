@@ -34,19 +34,17 @@ common() {
   echo -n "\"border_right\":0"
 }
 mydate() {
-
-  
   echo -n ",{"
   echo -n "\"name\":\"id_time\","
-  echo -n "\"full_text\":\" $(date "+%d/%m/%y %H:%M") \","
+  echo -n "\"full_text\":\" $(date "+%d-%m-%y   %H : %M")  \","
   echo -n "\"color\":\"$1\","
   echo -n "\"background\":\"$2\","
   common
   
   echo -n "},"
 }
-battery(){
 
+battery(){
 	stat=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_STATUS" | cut -d'=' -f2)
 	ico=""   
 	perc=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_CAPACITY=" | cut -d'=' -f2)	
@@ -54,7 +52,7 @@ if [ "$stat" = "Discharging" ]; then
        	ico=""
 fi
 
-if [ $perc -le 20  ]; then 
+if [ $perc -le 25  ]; then 
     notify-send -t -u  3000 "PLUG TO CHARGER" "battery below 20 percent"
 fi
 
@@ -69,9 +67,9 @@ common
 echo -n "},"
 }
 volume(){
-	vol=$(pactl list sinks |grep Volume:\ fr|awk '{print $5}')
+	vol=$(pactl list sinks |grep Volume:\ fr|awk '{print $5} ')
 	mute=$(pactl list sinks |grep Mute|awk '{print $2}')
-	ico=""
+	ico=" "
 	if [ "$mute" = "yes"  ]; then
 		ico=""
 	fi
@@ -88,15 +86,15 @@ common
 echo -n "},"
 }
 werkspace(){
-	r=$(xprop -root |grep _NET_CURRENT_DESKTOP)
-	d=$(echo $r|awk '{print $3}')
+	r=$(xprop -root |grep _NET_CURRENT_DESKTOP|head --lines=1|awk {'print $3'})
+	d=1
 	ico=""
 
 	
 echo -n ",{"
 echo -n " "
 echo -n "\"name\":\"ws\","
-echo -n "\"full_text\":\" $ico $d \","
+echo -n "\"full_text\":\" $ico $(( $d + $r ))   \","
 echo -n "\"color\":\"$1\","
 echo -n "\"background\":\"$2\","
 common
