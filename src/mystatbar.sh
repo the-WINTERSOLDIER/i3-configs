@@ -49,7 +49,13 @@ battery(){
 	ico=""   
 	perc=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_CAPACITY=" | cut -d'=' -f2)	
 if [ "$stat" = "Discharging" ]; then
-       	ico=""
+       	if [ $perc -ge 80 ]; then ico="" 
+        elif [ $perc -ge 60  ]; then ico=""     
+        elif [ $perc -ge 45  ]; then ico=""     
+        elif [ $perc -ge 30  ]; then ico=""     
+        elif [ $perc -ge 20  ]; then ico=""
+        elif [ $perc -ge 7  ]; then ico=""
+        fi
 fi
 
 if [ $perc -le 25  ]; then 
