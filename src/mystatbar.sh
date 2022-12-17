@@ -15,7 +15,7 @@ separator() {
   echo -n "\"full_text\":\"\"," # CTRL+Ue0b2
   echo -n "\"separator\":false,"
   echo -n "\"separator_block_width\":0,"
-  echo -n "\"border\":\"#333333\","
+  echo -n "\"border\":\"#00000000\","
   echo -n "\"border_left\":0,"
   echo -n "\"border_right\":0,"
   echo -n "\"border_top\":2,"
@@ -28,7 +28,7 @@ common() {
   echo -n "\"border\": \"#333333\","
   echo -n "\"separator\":false,"
   echo -n "\"separator_block_width\":0,"
-  echo -n "\"border_top\":2,"
+  echo -n "\"border_top\" : 2,"
   echo -n "\"border_bottom\":2,"
   echo -n "\"border_left\":0,"
   echo -n "\"border_right\":0"
@@ -46,15 +46,15 @@ mydate() {
 
 battery(){
 	stat=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_STATUS" | cut -d'=' -f2)
-	ico=""   
+	ico=""   
 	perc=$(cat /sys/class/power_supply/BAT0/uevent | grep "POWER_SUPPLY_CAPACITY=" | cut -d'=' -f2)	
 if [ "$stat" = "Discharging" ]; then
        	if [ $perc -ge 80 ]; then ico="" 
         elif [ $perc -ge 60  ]; then ico=""     
         elif [ $perc -ge 45  ]; then ico=""     
         elif [ $perc -ge 30  ]; then ico=""     
-        elif [ $perc -ge 20  ]; then ico=""
-        elif [ $perc -ge 7  ]; then ico=""
+        elif [ $perc -ge 20  ]; then ico=""
+        elif [ $perc -ge 7  ]; then ico=""
         fi
 fi
 
@@ -113,19 +113,19 @@ echo -n "},"
 while :;
 do
 	echo -n ",["
-			separator "#F0F6F7FF" "#333333"
-			werkspace  "#000000" "#F0F6F7FF"
+			separator "#F0F6F7" "#33333300"
+			werkspace  "#000000"  "#F0F6F7FF"
 			separator "#E94B3CFF" "#F0F6F7FF"
 			volume "#2D2926FF" "#E94B3CFF" 
 			separator $bg1 "#E94B3CFF"	
 			mydate	"#000000" $bg1
 			separator "#F2AA4CFF" $bg1
 			battery  "#101820FF" "#F2AA4CFF"
-			separator "#333333" "#F2AA4CFF"
+			separator "#33333300" "#F2AA4CFF"
 				
 	echo -n "]"
 
-  sleep 2 
+  #sleep 2 
 
 done
 #launched as background process
