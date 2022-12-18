@@ -30,10 +30,10 @@ font pango:monospace 8
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Start Picom at startup. Picom is window compositior that gives blur effect on windows
+# Start Picom at startup. Picom is window compositior that gives blur effect on windOws
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec --no-startup-id picom   --config ~/.config/picom/picom.conf
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp6738701-4k-desktop-mustang-wallpapers.png
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp6738701-4k-desktop-mustang-wallpapers.jpg
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -USR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
