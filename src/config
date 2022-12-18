@@ -32,8 +32,8 @@ exec --no-startup-id nm-applet
 
 # Start Picom at startup. Picom is window compositior that gives blur effect on windows
 #exec --no-startup-id picom --config ~/.config/picom/picom.conf -b
-exec --no-startup-id picom  --experimental-backends --config ~/.config/picom/picom.conf
-exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wallhaven-1920x1080.png
+exec --no-startup-id picom   --config ~/.config/picom/picom.conf
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper/wp6738701-4k-desktop-mustang-wallpapers.png
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -USR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
@@ -96,8 +96,8 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating enable , resize set 1900 990 ,move position center, border normal 2
-bindsym $mod+Ctrl+space floating disable, border pixel 2 
+bindsym $mod+Shift+space floating enable , resize set 1890 990 ,move position center
+bindsym $mod+Ctrl+space floating disable
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -122,7 +122,7 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace number $ws1
+bindsym $mod+1 workspace number $ws1 
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
 bindsym $mod+4 workspace number $ws4
@@ -132,7 +132,6 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-
 #Jump to last workspace visited
 bindsym $mod+Tab workspace back_and_forth
 
@@ -165,6 +164,7 @@ focus_follows_mouse yes
 #button6 scroll right
 #button7 scroll left
 #USAGE: bindsym button1 exec......
+
 default_border pixel 1 
 default_floating_border pixel 1
 #for_window[class="^.*"] border pixel 2.5  
@@ -172,7 +172,7 @@ default_floating_border pixel 1
 #new_window 1pixel
 
 # Customise window title bar <colorclass> <border> <background> <text> <indicator> <child_border>
-client.focused #4c7899ff #00000000 #333333ff #2e9ef400
+client.focused #4c7899ff #00000000 #000000ff #2e9ef400
 client.unfocused  #4c7899ff #00000000 #000000ff #2e9ef400
 client.focused_inactive  #4c7899ff #00000000 #000000ff #2e9ef400
 
@@ -197,12 +197,12 @@ mode "resize" {
         bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
+        bindsym Return mode "default" 
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "resize" 
 #---------------------------------application shorcut___________________________________
 mode "exec_app"{
 #list all key bindings to start a application 
