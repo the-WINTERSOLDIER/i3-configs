@@ -14,18 +14,14 @@ config.txt ,mystatusbar.sh , screenshot_utility.sh, specifi_area_SS.sh : ~/.conf
 **TrackPad Settings**
 
 - paste ```40-libinput.conf```  to  /etc/X11/xorg.conf.d/
-  
-  ![](/home/anton/git_repo/i3-configs/screenshot/Screenshot%20from%202022-08-14%2014-14-52.png)
-  
-  ![](/home/anton/git_repo/i3-configs/screenshot/Screenshot%20from%202022-08-14%2014-30-10.png)
-  
-  :![](/home/anton/git_repo/i3-configs/screenshot/Screenshot%20from%202022-08-14%2014-20-51.png)
 
-![Alt text](https://raw.githubusercontent.com/the-WINTERSOLDIER/i3-configs/main/screenshot/2021-02-02-17%3A30%3A59.png "Status bar built from scratch in bash")
-![Alt text](https://raw.githubusercontent.com/the-WINTERSOLDIER/i3-configs/main/screenshot/Screenshot%20from%202022-08-14%2014-12-11.png "screenshot1")
-![Alt text](https://raw.githubusercontent.com/the-WINTERSOLDIER/i3-configs/main/screenshot/Screenshot%20from%202022-08-14%2014-14-52.png "screenshot2")
-![Alt text](https://raw.githubusercontent.com/the-WINTERSOLDIER/i3-configs/main/screenshot/Screenshot%20from%202022-08-14%2014-20-51.png "screenshot3")
-![Alt text](https://raw.githubusercontent.com/the-WINTERSOLDIER/i3-configs/main/screenshot/Screenshot%20from%202022-08-14%2014-30-10.png "screenshot4")
+**Screenshots**
+![Screenshot from 2022-08-14 14-12-11](https://user-images.githubusercontent.com/29229288/209707314-0affa6ae-7f64-4ffe-ba7e-7e037fc4e385.png)
+![Screenshot from 2022-08-14 14-14-52](https://user-images.githubusercontent.com/29229288/209707318-1b700d85-4dfa-408c-ac56-3ac75adada25.png)
+![Screenshot from 2022-08-14 14-20-51](https://user-images.githubusercontent.com/29229288/209707323-8934336c-8044-4a8b-9378-d391f7a44217.png)
+![Screenshot from 2022-08-14 14-30-10](https://user-images.githubusercontent.com/29229288/209707331-9830089a-4839-4dff-b112-06eed0972a0f.png)
+
+
 
 **NOTIFY-SEND**
 
