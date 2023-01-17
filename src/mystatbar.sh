@@ -58,9 +58,9 @@ if [ "$stat" = "Discharging" ]; then
         fi
 fi
 
-if [ $perc -le 25  ]; then 
-    notify-send  -u critical --expire-time  3000 "PLUG TO CHARGER" "battery below 20 percent"
-fi
+#if [ $perc -le 25  ]; then 
+#    notify-send  -u critical --expire-time  3000 "PLUG TO CHARGER" "battery below 20 percent"
+#fi
 
 echo -n ",{"
 echo -n " "
